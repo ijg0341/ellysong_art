@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useCallback, useEffect } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
 import './hero.css'
 
 const carouselImages = [
@@ -69,7 +67,7 @@ export default function Hero() {
               {/* 전시 설명 */}
               <div className="mt-10 space-y-4 text-gray-700 leading-relaxed">
                 <p className="text-sm md:text-base">
-                  생명력의 고갈을 경험한 후, '살아가게 하는 힘', 즉 생명력에 집중하게 되었습니다.
+                  생명력의 고갈을 경험한 후, &apos;살아가게 하는 힘&apos;, 즉 생명력에 집중하게 되었습니다.
                 </p>
                 <p className="text-sm md:text-base">
                   이후 생명력을 탐구하는 여정으로, 프랑스에서 출발해 스페인 내륙을 거쳐 북대서양까지 이어지는 산티아고 순례길 1,400km를 걸으며, 다양한 풍토와 기후, 길 위의 계절 변화를 직접 경험하며 풍경에 대한 감각적 인식을 형성했습니다.
