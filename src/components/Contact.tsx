@@ -69,7 +69,7 @@ export default function Contact() {
             className="pt-16 border-t border-gray-100"
           >
             <p className="text-xs text-gray-400 tracking-[0.2em]">
-              © 2024 SONG ELI. ALL RIGHTS RESERVED.
+              © 2025 ELLY SONG. ALL RIGHTS RESERVED.
             </p>
           </motion.div>
         </motion.div>

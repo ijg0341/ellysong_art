@@ -10,8 +10,16 @@ const nanumMyeongjo = Nanum_Myeongjo({
 });
 
 export const metadata: Metadata = {
-  title: "Song Eli - Artist Portfolio",
-  description: "송엘리 작가의 포트폴리오. 비단에 채색하는 전통 기법으로 일상의 순간들과 여행의 풍경을 담아냅니다.",
+  title: "Elly Song - Artist Portfolio",
+  description: "송엘리(Elly Song) 작가의 포트폴리오. 산티아고 순례길 1,400km 도보 여행의 경험을 바탕으로, 비단 위에 전통 채색화 기법을 사용해 다양한 기후와 환경 속 '길 위의 풍경'을 작업합니다.",
+  keywords: ["송엘리", "Elly Song", "전통 채색화", "비단", "산티아고 순례길", "진채화", "한국화", "현대 채색화"],
+  authors: [{ name: "Elly Song" }],
+  openGraph: {
+    title: "Elly Song - Artist Portfolio",
+    description: "산티아고 순례길의 경험을 비단 위에 전통 채색화로 담아내는 송엘리 작가",
+    type: "website",
+    locale: "ko_KR",
+  },
 };
 
 export default function RootLayout({
