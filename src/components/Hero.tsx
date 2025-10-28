@@ -25,25 +25,6 @@ const carouselImages = [
 ]
 
 export default function Hero() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    const autoplay = setInterval(() => {
-      emblaApi.scrollNext()
-    }, 3000)
-
-    return () => clearInterval(autoplay)
-  }, [emblaApi])
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-white py-12">
@@ -84,54 +65,37 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
+
+              {/* 전시 설명 */}
+              <div className="mt-10 space-y-4 text-gray-700 leading-relaxed">
+                <p className="text-sm md:text-base">
+                  생명력의 고갈을 경험한 후, '살아가게 하는 힘', 즉 생명력에 집중하게 되었습니다.
+                </p>
+                <p className="text-sm md:text-base">
+                  이후 생명력을 탐구하는 여정으로, 프랑스에서 출발해 스페인 내륙을 거쳐 북대서양까지 이어지는 산티아고 순례길 1,400km를 걸으며, 다양한 풍토와 기후, 길 위의 계절 변화를 직접 경험하며 풍경에 대한 감각적 인식을 형성했습니다.
+                </p>
+                <p className="text-sm md:text-base">
+                  순례길에서 마주한 길 위의 풍경과 심상을 전통 채색화 기법으로 비단 위에 구현하였으며, 이번 전시는 그러한 창작 여정을 선보이는 자리입니다.
+                </p>
+              </div>
             </div>
           </motion.div>
 
-          {/* 오른쪽 캐러셀 */}
+          {/* 오른쪽 포스터 이미지 */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative w-full"
           >
-            <div className="embla relative group">
-              <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container">
-                  {carouselImages.map((image, index) => (
-                    <div className="embla__slide flex-[0_0_100%]" key={index}>
-                      <div className="relative w-full aspect-[9/16] md:aspect-[3/4]">
-                        <Image
-                          src={image}
-                          alt={`Hero image ${index + 1}`}
-                          fill
-                          className="object-cover"
-                          priority={index === 0}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* 이전/다음 버튼 */}
-              <button
-                onClick={scrollPrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100 z-10"
-                aria-label="Previous image"
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={scrollNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100 z-10"
-                aria-label="Next image"
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+            <div className="relative w-full aspect-[9/16] md:aspect-[3/4]">
+              <Image
+                src={carouselImages[0]}
+                alt="전시 포스터"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </motion.div>
         </div>
