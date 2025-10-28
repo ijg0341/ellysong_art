@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'PyeongChang Peace';
+  src: url('/fonts/PyeongChangPeace-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PyeongChang Peace';
+  src: url('/fonts/PyeongChangPeace-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PyeongChang';
+  src: url('/fonts/PyeongChang-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-pyeongchang {
+  font-family: 'PyeongChang Peace', serif !important;
+  font-weight: 700;
+}
+
+.font-pyeongchang-regular {
+  font-family: 'PyeongChang', serif !important;
+  font-weight: 400;
+}
+
+/* Embla Carousel Styles */
+.embla {
+  overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
