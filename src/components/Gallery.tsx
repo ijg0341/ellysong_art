@@ -52,7 +52,7 @@ export default function Gallery({ onSelectArtwork }: GalleryProps) {
                 <div className="relative aspect-[4/5]">
                   <Image
                     src={artwork.imagePath}
-                    alt={artwork.title}
+                    alt={artwork.titleKo}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -61,7 +61,7 @@ export default function Gallery({ onSelectArtwork }: GalleryProps) {
                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300" />
               </div>
               <div className="mt-6 text-center">
-                <h3 className="text-base font-light tracking-wide">{artwork.title}</h3>
+                <h3 className="text-base font-light tracking-wide">{artwork.titleKo}</h3>
                 <p className="text-sm text-gray-500 mt-2 font-light">
                   {artwork.material} · {artwork.year}
                 </p>

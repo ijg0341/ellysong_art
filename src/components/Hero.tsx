@@ -86,12 +86,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative w-full"
           >
-            <div className="relative w-full aspect-[9/16] md:aspect-[3/4]">
+            <div className="relative w-full aspect-[9/16] md:aspect-[3/4] bg-gray-50">
               <Image
                 src={carouselImages[0]}
                 alt="전시 포스터"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
