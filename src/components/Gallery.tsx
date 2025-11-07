@@ -11,10 +11,10 @@ interface GalleryProps {
 }
 
 export default function Gallery({ onSelectArtwork }: GalleryProps) {
-  const [selectedCategory, setSelectedCategory] = useState('전체')
+  const [selectedCategory, setSelectedCategory] = useState('All')
 
-  const filteredArtworks = selectedCategory === '전체' 
-    ? artworks 
+  const filteredArtworks = selectedCategory === 'All'
+    ? artworks
     : artworks.filter(art => art.category === selectedCategory)
 
   return (
